@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <style>
+      /* Base Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+        background-size: 400% 400%;
+        animation: gradientShift 10s ease infinite;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding-top: 70px; /* Space for fixed header */
+        padding-bottom: 50px; /* Space for fixed footer */
+        overflow-x: hidden;
+      }
+
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      header, footer {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        position: fixed;
+        left: 0;
+      }
+
+      header { top: 0; padding: 10px; }
+      footer { bottom: 0; padding: 8px; }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #ff6f91;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.8rem;
+        color: #ffffff;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 20px;
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #ff6f91;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #ff6f91;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin: 10px 0 5px;
+        color: #ffffff;
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        color: #fdfdfd;
+      }
+
+      .profile-picture {
+        margin: 15px 0;
+      }
+
+      .profile-picture img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Projects Cards */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .project-card {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+      }
+
+      .project-card p {
+        font-size: 0.85rem;
+        color: #fdfdfd;
+        margin: 10px 0 15px;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      }
+
+      .project-link, .contact-link {
+        display: inline-block;
+        margin: 8px 4px;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        word-break: break-word;
+      }
+
+      .project-link {
+        background: linear-gradient(45deg, #ff6f91, #fbc2eb);
+        color: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .project-link:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      }
+
+      .contact-section {
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .contact-link {
+        background: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        border-radius: 20px;
+      }
+
+      .contact-link:hover {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1.05);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        h1 { font-size: 1.7rem; }
+        h2 { font-size: 1.3rem; }
+        h3 { font-size: 1rem; }
+        .project-link, .contact-link { padding: 8px 16px; font-size: 0.8rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My World</h1>
+    </header>
+
+    <div class="container">
+      <h1>🎨 About Me</h1>
+      <p>
+        For anyone who wants to know more about me, check out my projects but also email me. There is an entire world of coding but also a world of words that I have made that we can explore. Policy analysis too! It is a fun world over here... let's check it out and bridge this world.
+      </p>
+
+      <div class="profile-picture">
+        <img src="https://i.imgur.com/sJRq3fJ.jpeg" alt="Cartoon Profile Picture" />
+      </div>
+
+      <!-- Projects Section -->
+      <h2>🌟 My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>CodePen Creations</h3>
+          <p>My experiments and creative coding projects on CodePen.</p>
+          <a href="https://codepen.io/your-work" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Croissant Smoosh</h3>
+          <p>A fun interactive app built with Vercel showcasing animations and coding skills.</p>
+          <a href="https://vercel.com/babycoder91as-projects/croissantsmooshone" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Penguin Hub Dub Fish</h3>
+          <p>An experimental project blending design and code, live on Vercel.</p>
+          <a href="https://vercel.com/babycoder91as-projects/penguin-hub-dub-fish" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>World Clock App</h3>
+          <p>A global clock app built to practice JavaScript and APIs.</p>
+          <a href="https://world-clock-one-stop.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>A weather application showing real-time data built with SheCodes.</p>
+          <a href="https://she-codes-weather-app-one.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <h2>Contact Me</h2>
+        <a href="mailto:myemail@example.com" class="contact-link">Email</a>
+        <a href="https://github.com/myprofile" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+        <a href="https://linkedin.com/in/myprofile" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 TLC. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
